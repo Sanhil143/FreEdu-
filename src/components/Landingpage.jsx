@@ -136,12 +136,138 @@ const Landingpage = () => {
         </div>
       </div>
       <div>
-        <div style={{
-          height:"231px",
-          width:"100%",
-          border:"1px solid black",
-          backgroundColor:"#EEF4FA"
-        }}></div>
+        <div
+          style={{
+            height: "231px",
+            width: "100%",
+            border: "1px solid black",
+            backgroundColor: "#EEF4FA",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            style={{
+              height: "71px",
+              width: "80%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <div
+              style={{
+                height: "100%",
+                width: "415px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <div
+                style={{
+                  height: "69px",
+                  width: "138px",
+                }}
+              >
+                <h3
+                  style={{
+                    textAlign: "center",
+                    letterSpacing: "0.5%",
+                    fontSize: "32px",
+                  }}
+                >
+                  21000+
+                </h3>
+                <p
+                  style={{
+                    textAlign: "center",
+                    fontSize: "18px",
+                    color: "#282938",
+                  }}
+                >
+                  Enrolled Students
+                </p>
+              </div>
+              <div
+                style={{
+                  height: "69px",
+                  width: "138px",
+                }}
+              >
+                <h3
+                  style={{
+                    textAlign: "center",
+                    letterSpacing: "0.5%",
+                    fontSize: "32px",
+                  }}
+                >
+                  100+
+                </h3>
+                <p
+                  style={{
+                    textAlign: "center",
+                    fontSize: "18px",
+                    color: "#282938",
+                  }}
+                >
+                  Expert Instructor
+                </p>
+              </div>
+              <div
+                style={{
+                  height: "69px",
+                  width: "138px",
+                }}
+              >
+                <h3
+                  style={{
+                    textAlign: "center",
+                    letterSpacing: "0.5%",
+                    fontSize: "32px",
+                  }}
+                >
+                  150+
+                </h3>
+                <p
+                  style={{
+                    textAlign: "center",
+                    fontSize: "18px",
+                    color: "#282938",
+                  }}
+                >
+                  Free Courses
+                </p>
+              </div>
+            </div>
+            <div
+              style={{
+                height: "36px",
+                width: "780px",
+                display:"flex",
+                alignItems:"center",
+                justifyContent:"space-evenly",
+              }}
+            >
+              <div>
+                <img src="./lorem.png"/>
+              </div>
+              <div>
+                <img src="./ditlance.png"/>
+              </div>
+              <div>
+                <img src="./best.png"/>
+              </div>
+              <div>
+                <img src="./neopots.png"/>
+              </div>
+              <div>
+                <img src="./onago.png"/>
+              </div>
+            </div> 
+          </div>
+        </div>
       </div>
     </div>
   );

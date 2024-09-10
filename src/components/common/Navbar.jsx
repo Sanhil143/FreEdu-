@@ -5,9 +5,9 @@ const Navbar = () => {
     <div
     style={{
       width:"100%",
-      height:"60px",
+      height:"75px",
       display:"flex",
-      backgroundColor:"#1C1E53"
+      backgroundColor:"#1C1E53",
     }}>
       <div style={{
         display:"flex",
@@ -24,7 +24,7 @@ const Navbar = () => {
           <h2 style={{
             cursor:"pointer",
             color:"#ffffff"
-          }}>freeDu</h2>
+          }}>freeDU</h2>
           <ul style={{
             display:'flex',
             listStyle:"none",
@@ -39,8 +39,8 @@ const Navbar = () => {
         </div>
         <div style={{
           display:"flex",
-          height:"35px",
-          width:"80px",
+          height:"37px",
+          width:"90px",
           marginRight:"100px",
           alignItems:"center",
           justifyContent:"center",

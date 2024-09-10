@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./common/Navbar";
+import boxContent from "../json/landingPageCards.json";
 
 const Landingpage = () => {
   return (
@@ -129,7 +130,7 @@ const Landingpage = () => {
                   height: "100%",
                   width: "100%",
                 }}
-                src="/group.png"
+                src="/landingPage//group.png"
               />
             </div>
           </div>
@@ -140,7 +141,6 @@ const Landingpage = () => {
           style={{
             height: "231px",
             width: "100%",
-            border: "1px solid black",
             backgroundColor: "#EEF4FA",
             display: "flex",
             alignItems: "center",
@@ -245,27 +245,120 @@ const Landingpage = () => {
               style={{
                 height: "36px",
                 width: "780px",
-                display:"flex",
-                alignItems:"center",
-                justifyContent:"space-evenly",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-around"
               }}
             >
               <div>
-                <img src="./lorem.png"/>
+                <img src="/landingPage/lorem.png" />
               </div>
               <div>
-                <img src="./ditlance.png"/>
+                <img src="/landingPage/ditlance.png" />
               </div>
               <div>
-                <img src="./best.png"/>
+                <img src="/landingPage/best.png" />
               </div>
               <div>
-                <img src="./neopots.png"/>
+                <img src="/landingPage/neopots.png" />
               </div>
               <div>
-                <img src="./onago.png"/>
+                <img src="/landingPage/onago.png" />
               </div>
-            </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          style={{
+            height: "150px",
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <h3
+            style={{
+              fontSize: "38px",
+              letterSpacing: "0.8%",
+              lineHeight: "150%",
+              color: "#282938",
+            }}
+          >
+            Benefits of Joining EDUFREE E-Learning
+          </h3>
+        </div>
+      </div>
+      <div>
+        <div
+          style={{
+            height: "674px",
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              height: "100%",
+              width: "1300px",
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            {boxContent.map((content, index) => (
+              <div
+                key={index}
+                style={{
+                  height: "300px", // Box height
+                  width: "406px", // Box width (30% to fit 3 boxes in a row)
+                  marginBottom: "20px", // Space between rows
+                  display: "flex",
+                  justifyContent: "center", // Center content horizontally
+                  alignItems: "center", // Center content vertically
+                  backgroundColor: "#D4DEFC", // Light background for visibility
+                }}
+              >
+                <div
+                  style={{
+                    width: "314px",
+                    height: "100%",
+                  }}
+                >
+                  <img
+                    src={content.imgSrc}
+                    alt={content.title}
+                    style={{ width: "40px", height: "40px", marginTop: "30px" }} // Image size and margin
+                  />
+                  <h3
+                    style={{
+                      fontSize: "24px",
+                      color: "#282938",
+                      fontWeight: "bold",
+                      marginTop: "15px",
+                    }}
+                  >
+                    {content.title}
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "16px",
+                      color: "#282938",
+                      fontWeight: "lighter",
+                      lineHeight:"28px",
+                      marginTop: "20px",
+                    }}
+                  >
+                    {content.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

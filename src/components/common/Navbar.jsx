@@ -28,7 +28,7 @@ const Navbar = () => {
           <ul style={{
             display:'flex',
             listStyle:"none",
-            marginLeft:"280px"
+            marginLeft:"470px"
           }}>
             <li className='navListStyle'>HOME</li>
             <li className='navListStyle'>ABOUTUS</li>

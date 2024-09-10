@@ -1,0 +1,32 @@
+[
+  {
+    "imgSrc": "/landingPage/cardSerialNum/1.png",
+    "title": "Free Courses",
+    "description": "We provide several free courses to support the availability of education for underprivileged communities"
+  },
+  {
+    "imgSrc": "/landingPage/cardSerialNum/2.png",
+    "title": "Access Forever",
+    "description": "All courses you have registered for can be accessed forever so your learning is more comfortable and less rushed"
+  },
+  {
+    "imgSrc": "/landingPage/cardSerialNum/3.png",
+    "title": "Consulting Group",
+    "description": "There is a consultation group which is useful if you want to ask questions and can also open new discussions"
+  },
+  {
+    "imgSrc": "/landingPage/cardSerialNum/4.png",
+    "title": "Certificates and Portfolios",
+    "description": "After completing the course you will receive a certificate and a portfolio of completed course projects"
+  },
+  {
+    "imgSrc": "/landingPage/cardSerialNum/5.png",
+    "title": "More Directed Learning",
+    "description": "This course provides courses from basic to expert level so that everyone can learn with the services we provide"
+  },
+  {
+    "imgSrc": "/landingPage/cardSerialNum/6.png",
+    "title": "Experienced instructor",
+    "description": "We have experienced instructors from the industrial world whose experience is beyond doubt"
+  }
+]

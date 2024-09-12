@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./common/Navbar";
 import boxContent from "../json/landingPageCards.json";
+import Footer from "./common/Footer";
 
 const Landingpage = () => {
   return (
@@ -247,7 +248,7 @@ const Landingpage = () => {
                 width: "780px",
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "space-around"
+                justifyContent: "space-around",
               }}
             >
               <div>
@@ -350,7 +351,7 @@ const Landingpage = () => {
                       fontSize: "16px",
                       color: "#282938",
                       fontWeight: "lighter",
-                      lineHeight:"28px",
+                      lineHeight: "28px",
                       marginTop: "20px",
                     }}
                   >
@@ -362,6 +363,7 @@ const Landingpage = () => {
           </div>
         </div>
       </div>
+      {/* <Footer/> */}
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -146,122 +147,212 @@ const Footer = () => {
             style={{
               height: "100%",
               width: "720px",
-              display:"flex",
-              justifyContent:"space-evenly"
+              display: "flex",
+              justifyContent: "space-evenly",
             }}
           >
-            <div style={{
-              height:"100%",
-              width:"150px",
-              display:"flex",
-              justifyContent:"center",
-              alignItems:"center"
-            }}>
-              <div style={{
-                height:"70%",
-                width:"100%",
-              }}>
-                <h3 style={{
-                  fontSize:"20px",
-                  color:"#ffffff"
-                }}>Social Media</h3>
-                <h5 style={{
-                  marginTop:"10px",
-                  fontSize:"18px",
-                  color:"#ffffff",
-                  fontWeight:"lighter",
-                  cursor:"pointer"
-                }}>Instagram</h5>
-                <h5 style={{
-                  marginTop:"10px",
-                  fontSize:"18px",
-                  color:"#ffffff",
-                  fontWeight:"lighter",
-                  cursor:"pointer"
-                }}>Twitter</h5>
-                <h5 style={{
-                  marginTop:"10px",
-                  fontSize:"18px",
-                  color:"#ffffff",
-                  fontWeight:"lighter",
-                  cursor:"pointer"
-                }}>LinkedIn</h5>
+            <div
+              style={{
+                height: "100%",
+                width: "150px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <div
+                style={{
+                  height: "70%",
+                  width: "100%",
+                }}
+              >
+                <h3
+                  style={{
+                    fontSize: "20px",
+                    color: "#ffffff",
+                  }}
+                >
+                  Social Media
+                </h3>
+                <h5
+                  style={{
+                    marginTop: "10px",
+                    fontSize: "18px",
+                    color: "#ffffff",
+                    fontWeight: "lighter",
+                    cursor: "pointer",
+                  }}
+                >
+                  <a
+                    href="https://www.instagram.com/__sanhil__/?hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      color: "#ffffff",
+                      textDecoration: "none",
+                    }}
+                  >
+                    Instagram
+                  </a>
+                </h5>
+                <h5
+                  style={{
+                    marginTop: "10px",
+                    fontSize: "18px",
+                    color: "#ffffff",
+                    fontWeight: "lighter",
+                    cursor: "pointer",
+                  }}
+                >
+                  <a
+                    href="https://x.com/i/flow/login?redirect_after_login=%2FSanhilRai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      color: "#ffffff",
+                      textDecoration: "none",
+                    }}
+                  >
+                    Twitter
+                  </a>
+                </h5>
+                <h5
+                  style={{
+                    marginTop: "10px",
+                    fontSize: "18px",
+                    color: "#ffffff",
+                    fontWeight: "lighter",
+                    cursor: "pointer",
+                  }}
+                >
+                  <a
+                    href="https://www.linkedin.com/in/sanhilrai143/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      color: "#ffffff",
+                      textDecoration: "none",
+                    }}
+                  >
+                    LinkedIn
+                  </a>
+                </h5>
               </div>
             </div>
-            <div style={{
-              height:"100%",
-              width:"150px",
-              display:"flex",
-              justifyContent:"center",
-              alignItems:"center"
-            }}>
-              <div style={{
-                height:"70%",
-                width:"100%",
-              }}>
-                <h3 style={{
-                  fontSize:"20px",
-                  color:"#ffffff"
-                }}>Program</h3>
-                <h5 style={{
-                  marginTop:"10px",
-                  fontSize:"18px",
-                  color:"#ffffff",
-                  fontWeight:"lighter",
-                  cursor:"pointer"
-                }}>Freedom to Learn</h5>
-                <h5 style={{
-                  marginTop:"10px",
-                  fontSize:"18px",
-                  color:"#ffffff",
-                  fontWeight:"lighter",
-                  cursor:"pointer"
-                }}>Financials Courses</h5>
-                <h5 style={{
-                  marginTop:"10px",
-                  fontSize:"18px",
-                  color:"#ffffff",
-                  fontWeight:"lighter",
-                  cursor:"pointer"
-                }}>Entreprneurship</h5>
+            <div
+              style={{
+                height: "100%",
+                width: "150px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <div
+                style={{
+                  height: "70%",
+                  width: "100%",
+                }}
+              >
+                <h3
+                  style={{
+                    fontSize: "20px",
+                    color: "#ffffff",
+                  }}
+                >
+                  Program
+                </h3>
+                <h5
+                  style={{
+                    marginTop: "10px",
+                    fontSize: "18px",
+                    color: "#ffffff",
+                    fontWeight: "lighter",
+                    cursor: "pointer",
+                  }}
+                >
+                  Freedom to Learn
+                </h5>
+                <h5
+                  style={{
+                    marginTop: "10px",
+                    fontSize: "18px",
+                    color: "#ffffff",
+                    fontWeight: "lighter",
+                    cursor: "pointer",
+                  }}
+                >
+                  Financials Courses
+                </h5>
+                <h5
+                  style={{
+                    marginTop: "10px",
+                    fontSize: "18px",
+                    color: "#ffffff",
+                    fontWeight: "lighter",
+                    cursor: "pointer",
+                  }}
+                >
+                  Entreprneurship
+                </h5>
               </div>
             </div>
-            <div style={{
-              height:"100%",
-              width:"150px",
-              display:"flex",
-              justifyContent:"center",
-              alignItems:"center"
-            }}>
-              <div style={{
-                height:"70%",
-                width:"100%",
-              }}>
-                <h3 style={{
-                  fontSize:"20px",
-                  color:"#ffffff"
-                }}>Baking</h3>
-                <h5 style={{
-                  marginTop:"10px",
-                  fontSize:"18px",
-                  color:"#ffffff",
-                  fontWeight:"lighter",
-                  cursor:"pointer"
-                }}>About Us</h5>
-                <h5 style={{
-                  marginTop:"10px",
-                  fontSize:"18px",
-                  color:"#ffffff",
-                  fontWeight:"lighter",
-                  cursor:"pointer"
-                }}>Conditions</h5>
-                <h5 style={{
-                  marginTop:"10px",
-                  fontSize:"18px",
-                  color:"#ffffff",
-                  fontWeight:"lighter",
-                  cursor:"pointer"
-                }}>Privacy Policy</h5>
+            <div
+              style={{
+                height: "100%",
+                width: "150px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <div
+                style={{
+                  height: "70%",
+                  width: "100%",
+                }}
+              >
+                <h3
+                  style={{
+                    fontSize: "20px",
+                    color: "#ffffff",
+                  }}
+                >
+                  Baking
+                </h3>
+                <h5
+                  style={{
+                    marginTop: "10px",
+                    fontSize: "18px",
+                    color: "#ffffff",
+                    fontWeight: "lighter",
+                    cursor: "pointer",
+                  }}
+                >
+                  About Us
+                </h5>
+                <h5
+                  style={{
+                    marginTop: "10px",
+                    fontSize: "18px",
+                    color: "#ffffff",
+                    fontWeight: "lighter",
+                    cursor: "pointer",
+                  }}
+                >
+                  Conditions
+                </h5>
+                <h5
+                  style={{
+                    marginTop: "10px",
+                    fontSize: "18px",
+                    color: "#ffffff",
+                    fontWeight: "lighter",
+                    cursor: "pointer",
+                  }}
+                >
+                  Privacy Policy
+                </h5>
               </div>
             </div>
           </div>

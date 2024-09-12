@@ -363,7 +363,7 @@ const Landingpage = () => {
           </div>
         </div>
       </div>
-      {/* <Footer/> */}
+      <Footer />
     </div>
   );
 };

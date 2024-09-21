@@ -39,7 +39,7 @@ const Navbar = () => {
             style={{
               display: "flex",
               listStyle: "none",
-              marginLeft: "470px",
+              marginLeft: "300px",
             }}
           >
             <li className="navListStyle">HOME</li>
@@ -53,8 +53,7 @@ const Navbar = () => {
           style={{
             display: "flex",
             height: "37px",
-            width: "200px",
-            padding:"10px",
+            width: "100px",
             marginRight: "100px",
             alignItems: "center",
             justifyContent: "center",
@@ -67,7 +66,7 @@ const Navbar = () => {
               color: "#ffffff",
             }}
           >
-            <Link style={{textDecoration:"none",color:"inherit"}} to="/login">JOIN</Link>
+            <Link style={{textDecoration:"none",color:"inherit"}} to="/auth">JOIN</Link>
           </p>
         </div>
       </div>

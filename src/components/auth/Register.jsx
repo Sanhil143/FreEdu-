@@ -1,8 +1,21 @@
-import React from "react";
-import Login from "./Login";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 
 const Register = ({ toggleAuthMode }) => {
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(data);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData({ ...data, [name]: value });
+  };
   return (
     <div
       style={{
@@ -24,7 +37,7 @@ const Register = ({ toggleAuthMode }) => {
             height: "100%",
             width: "55%",
             backgroundImage:
-              "url('/Auth//login.png'), linear-gradient(rgba(28, 30, 83, 0.7), rgba(28, 30, 83, 0.7))",
+              "url('/Auth//register.png'), linear-gradient(rgba(28, 30, 83, 0.7), rgba(28, 30, 83, 0.7))",
             backgroundSize: "cover",
             position: "relative",
             backgroundBlendMode: "overlay",
@@ -113,89 +126,104 @@ const Register = ({ toggleAuthMode }) => {
                   Prepare yourself for a future full of stars
                 </p>
               </div>
-              <div
-                style={{
-                  height: "150px",
-                  marginTop: "25px",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-evenly",
-                }}
-              >
-                <input
+              <form onSubmit={handleSubmit}>
+                <div
                   style={{
-                    width: "100%",
-                    height: "40px",
-                    boxSizing: "border-box",
-                    padding: "15px",
-                    margin: "0",
-                    outline: "none",
-                    backgroundColor: "#1C1E53",
-                    borderRadius: "5px",
-                    border: "1px solid grey",
-                    color: "white",
+                    height: "150px",
+                    marginTop: "25px",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-evenly",
                   }}
-                  type="text"
-                  placeholder="Name"
-                />
-                <input
+                >
+                  <input
+                    style={{
+                      width: "100%",
+                      height: "40px",
+                      boxSizing: "border-box",
+                      padding: "15px",
+                      margin: "0",
+                      outline: "none",
+                      backgroundColor: "#1C1E53",
+                      borderRadius: "5px",
+                      border: "1px solid grey",
+                      color: "white",
+                    }}
+                    type="text"
+                    placeholder="Name"
+                    name="name"
+                    value={data.name}
+                    onChange={handleChange}
+                    required
+                  />
+                  <input
+                    style={{
+                      width: "100%",
+                      height: "40px",
+                      boxSizing: "border-box",
+                      padding: "15px",
+                      margin: "0",
+                      outline: "none",
+                      backgroundColor: "#1C1E53",
+                      borderRadius: "5px",
+                      border: "1px solid grey",
+                      color: "white",
+                    }}
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                    value={data.email}
+                    onChange={handleChange}
+                    required
+                  />
+                  <input
+                    style={{
+                      width: "100%",
+                      height: "40px",
+                      boxSizing: "border-box",
+                      padding: "15px",
+                      margin: "0",
+                      outline: "none",
+                      backgroundColor: "#1C1E53",
+                      borderRadius: "5px",
+                      border: "1px solid grey",
+                      color: "white",
+                    }}
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    value={data.password}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div
                   style={{
-                    width: "100%",
                     height: "40px",
-                    boxSizing: "border-box",
-                    padding: "15px",
-                    margin: "0",
-                    outline: "none",
-                    backgroundColor: "#1C1E53",
-                    borderRadius: "5px",
-                    border: "1px solid grey",
-                    color: "white",
-                  }}
-                  type="email"
-                  placeholder="Email"
-                />
-                <input
-                  style={{
                     width: "100%",
-                    height: "40px",
-                    boxSizing: "border-box",
-                    padding: "15px",
-                    margin: "0",
-                    outline: "none",
-                    backgroundColor: "#1C1E53",
-                    borderRadius: "5px",
-                    border: "1px solid grey",
-                    color: "white",
-                  }}
-                  type="password"
-                  placeholder="Password"
-                />
-              </div>
-              <div
-                style={{
-                  height: "40px",
-                  width: "100%",
-                  marginTop: "15px",
-                  backgroundColor: "#FCD980",
-                  borderRadius: "5px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  cursor: "pointer",
-                }}
-              >
-                <button
-                  style={{
-                    height: "30px",
-                    width: "40%",
-                    border: "none",
+                    marginTop: "15px",
                     backgroundColor: "#FCD980",
+                    borderRadius: "5px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
                     cursor: "pointer",
                   }}
                 >
-                  Signin
-                </button>
-              </div>
+                  <button
+                    type="submit"
+                    style={{
+                      height: "30px",
+                      width: "40%",
+                      border: "none",
+                      backgroundColor: "#FCD980",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Signin
+                  </button>
+                </div>
+              </form>
               <div
                 style={{
                   height: "30px",
@@ -210,14 +238,14 @@ const Register = ({ toggleAuthMode }) => {
                   style={{
                     height: "30px",
                     width: "75%",
-                    color:"white"
+                    color: "white",
                   }}
                 >
                   Already have a account?{" "}
                   <span
                     onClick={toggleAuthMode}
                     style={{
-                      textDecoration: "underline",
+                      textDecoration: "none",
                       cursor: "pointer",
                       color: "#FCD980",
                     }}

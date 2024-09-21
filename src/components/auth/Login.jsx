@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Login = ({ toggleAuthMode }) => {
+  const [data, setData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(data);
+  };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData({ ...data, [name]: value });
+  };
   return (
     <div
       style={{
@@ -111,73 +124,84 @@ const Login = ({ toggleAuthMode }) => {
                   Prepare yourself for a future full of stars
                 </p>
               </div>
-              <div
-                style={{
-                  height: "150px",
-                  marginTop: "25px",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-evenly",
-                }}
-              >
-                <input
+              <form onSubmit={handleSubmit}>
+                <div
                   style={{
-                    width: "100%",
-                    height: "40px",
-                    boxSizing: "border-box",
-                    padding: "15px",
-                    margin: "0",
-                    outline: "none",
-                    backgroundColor: "#1C1E53",
-                    borderRadius: "5px",
-                    border: "1px solid grey",
-                    color: "white",
+                    height: "150px",
+                    marginTop: "25px",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-evenly",
                   }}
-                  type="email"
-                  placeholder="Email"
-                />
-                <input
+                >
+                  <input
+                    style={{
+                      width: "100%",
+                      height: "40px",
+                      boxSizing: "border-box",
+                      padding: "15px",
+                      margin: "0",
+                      outline: "none",
+                      backgroundColor: "#1C1E53",
+                      borderRadius: "5px",
+                      border: "1px solid grey",
+                      color: "white",
+                    }}
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={data.email}
+                    onChange={handleChange}
+                    required
+                  />
+                  <input
+                    style={{
+                      width: "100%",
+                      height: "40px",
+                      boxSizing: "border-box",
+                      padding: "15px",
+                      margin: "0",
+                      outline: "none",
+                      backgroundColor: "#1C1E53",
+                      borderRadius: "5px",
+                      border: "1px solid grey",
+                      color: "white",
+                    }}
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    value={data.password}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div
                   style={{
-                    width: "100%",
                     height: "40px",
-                    boxSizing: "border-box",
-                    padding: "15px",
-                    margin: "0",
-                    outline: "none",
-                    backgroundColor: "#1C1E53",
-                    borderRadius: "5px",
-                    border: "1px solid grey",
-                    color: "white",
-                  }}
-                  type="password"
-                  placeholder="Password"
-                />
-              </div>
-              <div
-                style={{
-                  height: "40px",
-                  width: "100%",
-                  marginTop: "15px",
-                  backgroundColor: "#FCD980",
-                  borderRadius: "5px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  cursor: "pointer",
-                }}
-              >
-                <button onClick={toggleAuthMode}
-                  style={{
-                    height: "30px",
-                    width: "40%",
-                    border: "none",
+                    width: "100%",
+                    marginTop: "15px",
                     backgroundColor: "#FCD980",
+                    borderRadius: "5px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
                     cursor: "pointer",
                   }}
                 >
-                  Login
-                </button>
-              </div>
+                  <button
+                    type="submit"
+                    style={{
+                      height: "30px",
+                      width: "40%",
+                      border: "none",
+                      backgroundColor: "#FCD980",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Login
+                  </button>
+                </div>
+              </form>
               <div
                 style={{
                   height: "30px",
@@ -192,14 +216,14 @@ const Login = ({ toggleAuthMode }) => {
                   style={{
                     height: "30px",
                     width: "70%",
-                    color:"white"
+                    color: "white",
                   }}
                 >
                   Create a account?{" "}
                   <span
                     onClick={toggleAuthMode}
                     style={{
-                      textDecoration: "underline",
+                      textDecoration: "none",
                       cursor: "pointer",
                       color: "#FCD980",
                     }}

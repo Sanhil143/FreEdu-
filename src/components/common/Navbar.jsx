@@ -61,13 +61,20 @@ const Navbar = () => {
             cursor: "pointer",
           }}
         >
-          <p
+          <Link
+            to="/auth"
             style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              height: "100%",
+              width: "100%",
+              textDecoration: "none",
               color: "#ffffff",
             }}
           >
-            <Link style={{textDecoration:"none",color:"inherit"}} to="/auth">JOIN</Link>
-          </p>
+            JOIN
+          </Link>
         </div>
       </div>
     </div>

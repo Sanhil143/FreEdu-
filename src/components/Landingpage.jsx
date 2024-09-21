@@ -85,6 +85,8 @@ const Landingpage = () => {
                     justifyContent: "center",
                     alignItems: "center",
                     borderRadius: "5px",
+                    border:"none"
+
                   }}
                 >
                   <button
@@ -94,6 +96,7 @@ const Landingpage = () => {
                       borderRadius: "5px",
                       backgroundColor: "#FCD980",
                       cursor: "pointer",
+                      border:"none"
                     }}
                   >
                     View Courses

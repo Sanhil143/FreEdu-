@@ -1,5 +1,6 @@
 import React from "react";
 import "../../css/Navbar.css";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div
@@ -52,7 +53,8 @@ const Navbar = () => {
           style={{
             display: "flex",
             height: "37px",
-            width: "90px",
+            width: "200px",
+            padding:"10px",
             marginRight: "100px",
             alignItems: "center",
             justifyContent: "center",
@@ -65,7 +67,7 @@ const Navbar = () => {
               color: "#ffffff",
             }}
           >
-            JOIN
+            <Link style={{textDecoration:"none",color:"inherit"}} to="/login">JOIN</Link>
           </p>
         </div>
       </div>

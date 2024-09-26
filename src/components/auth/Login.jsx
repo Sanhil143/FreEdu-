@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { callLogin } from "../../api/auth";
 
 const Login = ({ toggleAuthMode }) => {
   const [data, setData] = useState({
@@ -6,9 +7,25 @@ const Login = ({ toggleAuthMode }) => {
     password: "",
   });
 
-  const handleSubmit = (e) => {
+  const formdata = new FormData();
+  formdata.append("email", data.email);
+  formdata.append("password", data.password);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(data);
+    try {
+      const response = await callLogin(formdata);
+      if (response.data) {
+        localStorage.setItem("accessToken", response.data.token);
+        localStorage.setItem("userId", response.data.data[0].userId);
+        localStorage.setItem("email", response.data.data[0].email);
+        localStorage.setItem("firstName", response.data.data[0].firstname);
+        localStorage.setItem("lastName", response.data.data[0].lastname);
+        localStorage.setItem("createdAt", response.data.data[0].createdAt);
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
   };
   const handleChange = (e) => {
     const { name, value } = e.target;

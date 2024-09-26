@@ -33,7 +33,15 @@ const Navbar = () => {
               color: "#ffffff",
             }}
           >
-            freeDU
+            <Link
+                to="/"
+                style={{
+                  textDecoration: "none",
+                  color:"#ffffff"
+                }}
+              >
+                freeDU
+              </Link>
           </h2>
           <ul
             style={{
@@ -42,7 +50,17 @@ const Navbar = () => {
               marginLeft: "300px",
             }}
           >
-            <li className="navListStyle">HOME</li>
+            <li className="navListStyle">
+              <Link
+                to="/home"
+                style={{
+                  textDecoration: "none",
+                  color:"#ffffff"
+                }}
+              >
+                HOME
+              </Link>
+            </li>
             <li className="navListStyle">ABOUTUS</li>
             <li className="navListStyle">COURSE</li>
             <li className="navListStyle">FAQs</li>

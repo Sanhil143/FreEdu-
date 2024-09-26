@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { callSignup } from "../../api/auth";
 
 const Register = ({ toggleAuthMode }) => {
   const [data, setData] = useState({
@@ -7,9 +8,21 @@ const Register = ({ toggleAuthMode }) => {
     password: "",
   });
 
-  const handleSubmit = (e) => {
+  const formdata = new FormData();
+  formdata.append("firstName", data.name);
+  formdata.append("email", data.email);
+  formdata.append("password", data.password);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(data);
+    try {
+      const response = await callSignup(formdata);
+      if (response.data) {
+        toggleAuthMode();
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
   };
 
   const handleChange = (e) => {

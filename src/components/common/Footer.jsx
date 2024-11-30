@@ -1,6 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
 
+/**
+ * Footer component renders the footer section of the webpage.
+ * It includes contact information, social media links, and additional
+ * program and policy information.
+ * The footer is styled with a background color and structured
+ * using flexbox for layout.
+ */
 const Footer = () => {
   return (
     <div>

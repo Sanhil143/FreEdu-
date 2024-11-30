@@ -1,6 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { callSignup } from "../../api/auth";
+import { checkPropTypes } from "prop-types";
 
+/**
+ * This component renders a registration form. It handles the form submission
+ * by calling the callSignup api function. If the response is successful, it
+ * toggles the auth mode to login. If the response fails, it logs the error
+ * message to the console.
+ *
+ * @param {Function} toggleAuthMode - toggles the auth mode
+ * @returns {JSX.Element} - a JSX element representing the register form
+ */
 const Register = ({ toggleAuthMode }) => {
   const [data, setData] = useState({
     name: "",
@@ -273,6 +283,10 @@ const Register = ({ toggleAuthMode }) => {
       </div>
     </div>
   );
+};
+
+Register.propTypes = {
+  toggleAuthMode: checkPropTypes.func.isRequired,
 };
 
 export default Register;

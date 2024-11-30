@@ -1,11 +1,24 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { callLogin } from "../../api/auth";
+import { useNavigate } from "react-router-dom";
+import { checkPropTypes } from "prop-types";
 
-const Login = ({ toggleAuthMode }) => {
+/**
+ * This component renders a login form. It handles the login form submission
+ * by calling the callLogin api function and if the response is successful, it
+ * stores the returned data in the local storage and navigates to the home page.
+ * If the response fails, it logs the error message to the console.
+ *
+ * @param {Function} toggleAuthMode - toggles the auth mode
+ * @returns {JSX.Element} - a JSX element representing the login form
+ */
+const Login = ({ toggleAuthMode}) => {
   const [data, setData] = useState({
     email: "",
     password: "",
   });
+
+  const navigate = useNavigate();
 
   const formdata = new FormData();
   formdata.append("email", data.email);
@@ -22,6 +35,11 @@ const Login = ({ toggleAuthMode }) => {
         localStorage.setItem("firstName", response.data.data[0].firstname);
         localStorage.setItem("lastName", response.data.data[0].lastname);
         localStorage.setItem("createdAt", response.data.data[0].createdAt);
+        if (response.data.data[0].role === "admin") {
+          navigate("/home");
+        } else {
+          navigate("/home");
+        }
       }
     } catch (error) {
       console.error(error.message);
@@ -255,6 +273,10 @@ const Login = ({ toggleAuthMode }) => {
       </div>
     </div>
   );
+};
+
+Login.propTypes = {
+  toggleAuthMode: checkPropTypes.func.isRequired,
 };
 
 export default Login;

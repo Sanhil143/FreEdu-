@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "./common/Navbar";
 import boxContent from "../json/landingPageCards.json";
 import Footer from "./common/Footer";

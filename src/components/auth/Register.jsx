@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { callSignup } from "../../api/auth";
-import { checkPropTypes } from "prop-types";
+import PropTypes from "prop-types";
 
 /**
  * This component renders a registration form. It handles the form submission
@@ -286,7 +286,7 @@ const Register = ({ toggleAuthMode }) => {
 };
 
 Register.propTypes = {
-  toggleAuthMode: checkPropTypes.func.isRequired,
+  toggleAuthMode: PropTypes.func.isRequired,
 };
 
 export default Register;

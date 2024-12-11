@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { callLogin } from "../../api/auth";
 import { useNavigate } from "react-router-dom";
-import { checkPropTypes } from "prop-types";
+import PropTypes from "prop-types";
 
 /**
  * This component renders a login form. It handles the login form submission
@@ -276,7 +276,7 @@ const Login = ({ toggleAuthMode}) => {
 };
 
 Login.propTypes = {
-  toggleAuthMode: checkPropTypes.func.isRequired,
+  toggleAuthMode: PropTypes.func.isRequired,
 };
 
 export default Login;
